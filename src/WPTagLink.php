@@ -28,7 +28,7 @@ namespace WaughJ\WPTagLink
 			parent::__construct( $href, $value, $atts );
 		}
 
-		private static function GetTagID( array $atts ) : ?object
+		private static function GetTagID( array $atts )
 		{
 			$tag = ( isset( $atts[ 'slug' ] ) ) ? get_term_by( 'slug', $atts[ 'slug' ], 'post_tag' ) : false;
 			return ( $tag !== false ) ? $tag : null;
